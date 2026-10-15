@@ -1,0 +1,1158 @@
+:root {
+  /* Brand Colors */
+  --primary-color: #064ea8;
+  --primary-hover: #043c83;
+  --secondary-color: #00b2f5;
+  --accent-color: #38d9ff;
+
+  /* Background Colors */
+  --background-color: #ffffff;
+  --light-background: #eaf8ff;
+  --card-background: #f5fbff;
+
+  /* Text Colors */
+  --heading-color: #064ea8;
+  --text-color: #1e3448;
+  --muted-text: #64748b;
+  --white-color: #ffffff;
+
+  /* Borders */
+  --border-color: #d6eaf5;
+
+  /* Gradients */
+  --brand-gradient: linear-gradient(135deg, #064ea8 0%, #00b2f5 100%);
+
+  /* Design */
+  --border-radius: 12px;
+  --button-radius: 30px;
+
+  --green-bg: #12d6771c;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--button-radius);
+  padding: 12px 28px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* ================================
+navbar start
+================================ */
+
+/* Header */
+.urban-header {
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Announcement Bar */
+.urban-topbar {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 7px 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+.urban-topbar i {
+  color: var(--accent-color);
+  font-size: 10px;
+}
+
+/* Main Navbar */
+.urban-navbar {
+  background: var(--background-color);
+  box-shadow: 0 4px 20px rgba(6, 78, 168, 0.07);
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.urban-logo img {
+  width: 165px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.urban-logo:hover img {
+  transform: scale(1.04);
+}
+
+/* Navigation Links */
+.urban-nav-link {
+  position: relative;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 10px;
+  padding: 9px 0 !important;
+  transition: color 0.3s ease;
+}
+
+/* Animated Underline */
+.urban-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.urban-nav-link:hover,
+.urban-nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.urban-nav-link:hover::after,
+.urban-nav-link.active::after {
+  width: 100%;
+}
+
+/* Shop Button */
+.urban-shop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-gradient);
+  color: var(--white-color);
+  padding: 12px 25px;
+  border-radius: var(--button-radius);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 178, 245, 0.2);
+  transition: all 0.3s ease;
+}
+
+.urban-shop-btn:hover {
+  color: var(--white-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(6, 78, 168, 0.22);
+}
+
+.urban-shop-btn i {
+  transition: transform 0.3s ease;
+}
+
+.urban-shop-btn:hover i {
+  transform: translate(3px, -3px);
+}
+
+/* Mobile Toggler */
+.urban-toggler {
+  border: none !important;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+.urban-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(0, 178, 245, 0.15);
+}
+
+/* Desktop Entrance Animation */
+@keyframes urbanFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.urban-navbar {
+  animation: urbanFadeDown 0.6s ease both;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .urban-logo img {
+    width: 145px;
+  }
+
+  .urban-navbar .navbar-collapse {
+    padding: 18px 0 8px;
+  }
+
+  .urban-nav-link {
+    margin: 0;
+    padding: 12px 5px !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .urban-nav-link::after {
+    display: none;
+  }
+
+  .urban-nav-actions {
+    margin-top: 18px;
+  }
+
+  .urban-shop-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-navbar {
+    animation: none;
+  }
+
+  .urban-navbar *,
+  .urban-navbar *::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .urban-logo img {
+    width: 120px;
+  }
+}
+
+/* navbar end  */
+
+/* hero-banner start */
+
+.home-2 {
+  display: none;
+}
+.urban-hero-slider {
+  width: 100%;
+  overflow: hidden;
+  background: var(--light-background);
+}
+
+.urban-slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Indicators */
+.urban-hero-slider .carousel-indicators button {
+  width: 25px;
+  height: 5px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.urban-hero-slider .carousel-indicators .active {
+  width: 40px;
+  background-color: var(--primary-color);
+}
+
+/* Navigation Buttons */
+.urban-hero-slider .carousel-control-prev,
+.urban-hero-slider .carousel-control-next {
+  width: 6%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.urban-hero-slider .carousel-control-prev:hover,
+.urban-hero-slider .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .urban-hero-slider .carousel-control-prev,
+  .urban-hero-slider .carousel-control-next {
+    width: 10%;
+  }
+
+  .urban-hero-slider .carousel-indicators button {
+    width: 18px;
+    height: 4px;
+  }
+
+  .urban-hero-slider .carousel-indicators .active {
+    width: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .home-2 {
+    display: block !important;
+  }
+  .home-1 {
+    display: none !important;
+  }
+}
+
+/* hero-banner end */
+
+/* advantages start */
+
+.urban-advantages {
+  background: var(--light-background);
+  border-block: 1px solid var(--border-color);
+}
+
+.advantage-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--white-color);
+  color: var(--primary-color);
+  font-size: 25px;
+  transition: all 0.3s ease;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.advantage-title {
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.advantage-item:hover .advantage-icon {
+  animation-play-state: paused;
+  transform: translateY(-5px) scale(1.08);
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .advantage-icon {
+    animation: none;
+    transition: none;
+  }
+}
+@media (max-width: 575px) {
+  .advantage-title {
+    font-size: 13px;
+  }
+  .advantages p {
+    font-size: 13px;
+  }
+}
+
+/* advantage end */
+
+/* product-details start */
+.urban-product-details {
+  background: var(--background-color);
+}
+
+.urban-product-image {
+  background: var(--light-background);
+  border-radius: 24px;
+  padding: 45px 25px;
+  overflow: hidden;
+}
+
+.urban-product-image img {
+  /* max-height: 430px; */
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  animation: productFloat 4s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+.urban-product-image:hover img {
+  animation-play-state: paused;
+  transform: scale(1.04);
+}
+
+.urban-product-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--white-color);
+  color: var(--primary-color);
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.urban-product-subtitle {
+  color: var(--secondary-color);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.urban-product-heading {
+  color: var(--heading-color);
+  font-size: clamp(27px, 3vw, 40px);
+}
+
+.urban-spec-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  transition: 0.3s ease;
+}
+
+.urban-spec-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-color);
+}
+
+.urban-spec-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--light-background);
+  color: var(--primary-color);
+  font-size: 19px;
+}
+
+.urban-spec-card h3,
+.urban-usage-box h3 {
+  color: var(--primary-color);
+}
+
+.urban-usage-box {
+  background: var(--light-background);
+  color: var(--text-color);
+}
+
+.urban-usage-box li::marker {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.urban-product-btn {
+  background: var(--brand-gradient);
+  color: var(--white-color);
+  border: none;
+  transition: 0.3s ease;
+}
+
+.urban-product-btn:hover {
+  color: var(--white-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6, 78, 168, 0.2);
+}
+
+.urban-contact-link {
+  color: var(--primary-color);
+}
+
+.urban-contact-link:hover {
+  color: var(--secondary-color);
+}
+
+@keyframes productFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-product-image img {
+    animation: none;
+  }
+
+  .urban-spec-card,
+  .urban-product-btn {
+    transition: none;
+  }
+}
+
+/* product-details end */
+
+/* Urban Baby Product Section start*/
+.urban-products {
+  background: var(--background-color);
+}
+
+.urban-product-image-box {
+  background: var(--light-background);
+  border-radius: 12px;
+  /* aspect-ratio: 0.68; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 15px;
+}
+
+.urban-product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.urban-product-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Product Name */
+.urban-product-name {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+/* Scrollbar */
+.urban-product-scrollbar {
+  position: relative !important;
+  flex: 1;
+  max-width: 400px;
+  height: 3px !important;
+  background: var(--border-color);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.urban-product-scrollbar .swiper-scrollbar-drag {
+  background: var(--primary-color);
+  border-radius: 10px;
+  cursor: grab;
+}
+
+/* Arrow Buttons */
+.urban-arrow-btn {
+  background: transparent;
+  border: 0;
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.urban-arrow-btn:hover {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+.urban-whatsapp-btn {
+  background: transparent;
+  color: #25d366;
+  border: none;
+  padding: 10px 0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.urban-whatsapp-btn .fa-whatsapp {
+  font-size: 22px;
+  color: #25d366;
+}
+
+.urban-whatsapp-btn:hover {
+  color: var(--secondary-color);
+}
+
+.urban-whatsapp-btn .fa-arrow-right {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.urban-whatsapp-btn:hover .fa-arrow-right {
+  transform: translateX(5px);
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .urban-product-image {
+    padding: 15px;
+  }
+  .urban-product-heading {
+    color: var(--heading-color);
+    font-size: clamp(24px, 3vw, 40px);
+  }
+  .urban-product-subtitle {
+    font-size: 13px;
+    letter-spacing: normal;
+  }
+
+  .urban-product-image-box {
+    /* aspect-ratio: 0.8; */
+    padding: 10px;
+  }
+
+  .urban-product-name {
+    font-size: 14px;
+  }
+
+  .urban-product-scrollbar {
+    max-width: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-product-image-box img,
+  .urban-arrow-btn {
+    transition: none;
+  }
+}
+
+/* product-sec end */
+
+/* Urban Baby - How It Works */
+
+.urban-how-it-works {
+  background: var(--light-background);
+}
+
+.urban-work-card {
+  position: relative;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.urban-work-card-large {
+  height: 100%;
+  min-height: 584px;
+}
+
+/* Images */
+.urban-work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Hidden Overlay */
+.urban-work-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(6, 78, 168, 0.92),
+    rgba(0, 178, 245, 0.25) 65%,
+    transparent
+  );
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+/* Hidden Content */
+.urban-work-content {
+  color: var(--white-color);
+  transform: translateY(25px);
+  transition: transform 0.4s ease;
+}
+
+.urban-work-content h3 {
+  color: var(--white-color);
+  font-size: 23px;
+}
+
+.urban-work-content p {
+  color: var(--white-color);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+/* Icon */
+.urban-work-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--white-color);
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+/* Hover and Keyboard Focus */
+.urban-work-card:hover .urban-work-overlay,
+.urban-work-card:focus .urban-work-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.urban-work-card:hover .urban-work-content,
+.urban-work-card:focus .urban-work-content {
+  transform: translateY(0);
+}
+
+.urban-work-card:hover .urban-work-img,
+.urban-work-card:focus .urban-work-img {
+  transform: scale(1.06);
+}
+
+.urban-work-card:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .urban-work-card,
+  .urban-work-card-large {
+    height: 300px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .urban-work-card,
+  .urban-work-card-large {
+    height: 280px;
+  }
+
+  .urban-work-overlay {
+    padding: 20px;
+  }
+
+  .urban-work-content h3 {
+    font-size: 19px;
+  }
+
+  .urban-work-content p {
+    font-size: 12px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .urban-work-img,
+  .urban-work-overlay,
+  .urban-work-content {
+    transition: none;
+  }
+}
+/* how to work end */
+
+/* certified-sec start */
+#certified {
+  background-color: var(--green-bg);
+}
+
+/* certified-sec end */
+
+/* Urban Baby FAQ */
+
+.urban-faq .accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: 12px !important;
+  overflow: hidden;
+  background: var(--white-color);
+}
+
+.urban-faq .accordion-button {
+  background: var(--white-color);
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 20px 24px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.urban-faq .accordion-button:not(.collapsed) {
+  background: var(--light-background);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.urban-faq .accordion-button:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--secondary-color);
+}
+
+.urban-faq .accordion-button:hover {
+  color: var(--primary-color);
+}
+
+/* Accordion Icon */
+.urban-faq .accordion-button::after {
+  display: none;
+}
+
+.urban-faq .accordion-button::before {
+  content: "\f067";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-left: auto;
+  order: 2;
+  font-size: 14px;
+}
+
+.urban-faq .accordion-button:not(.collapsed)::before {
+  content: "\f068";
+}
+
+/* Answer */
+.urban-faq .accordion-body {
+  padding: 20px 24px;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Contact Link */
+.urban-faq-contact {
+  color: var(--primary-color);
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.urban-faq-contact:hover {
+  color: var(--secondary-color);
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .urban-faq .accordion-button {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .urban-faq .accordion-body {
+    padding: 16px;
+    font-size: 13px;
+  }
+}
+
+/* faq end */
+
+/* Urban Baby Testimonials */
+
+.urban-testimonials {
+  background: var(--light-background);
+}
+
+.urban-review-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.urban-review-swiper .swiper-slide {
+  height: auto;
+}
+
+.urban-review-card {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.urban-review-card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 10px 30px rgba(6, 78, 168, 0.08);
+  transform: translateY(-4px);
+}
+
+.urban-review-avatar {
+  width: 45px;
+  height: 45px;
+  background: var(--light-background);
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.urban-review-card h3 {
+  color: var(--text-color);
+}
+
+.urban-review-source {
+  font-size: 23px;
+  color: var(--primary-color);
+}
+
+.urban-review-stars {
+  color: #f4b400;
+  font-size: 14px;
+}
+
+.urban-review-text {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.urban-review-pagination {
+  position: static !important;
+  width: auto !important;
+  display: flex;
+  gap: 5px;
+}
+
+.urban-review-pagination .swiper-pagination-bullet {
+  background: var(--primary-color);
+}
+
+.urban-review-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--white-color);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+.urban-review-arrow:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-review-card,
+  .urban-review-arrow {
+    transition: none;
+  }
+}
+
+/* review end */
+
+/* ==============================
+   URBAN BABY FOOTER
+============================== */
+
+.urban-footer {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.urban-footer-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 40px;
+}
+
+/* Footer Headings */
+.urban-footer-title {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+/* About Description */
+.urban-footer-description {
+  color: var(--white-color);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.9;
+  max-width: 350px;
+}
+
+/* Footer Links */
+.urban-footer-links li {
+  margin-bottom: 12px;
+}
+
+.urban-footer-links a,
+.urban-footer-contact a,
+.urban-back-top {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.urban-footer-links a:hover,
+.urban-footer-contact a:hover,
+.urban-back-top:hover {
+  color: var(--accent-color);
+}
+
+.urban-footer-links a i {
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+
+.urban-footer-links a:hover i {
+  transform: translateX(4px);
+}
+
+/* Contact Details */
+.urban-footer-contact li {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.urban-footer-contact i {
+  color: var(--accent-color);
+}
+
+/* Social Media */
+.urban-footer-social a {
+  color: var(--white-color);
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.urban-footer-social a:hover {
+  color: var(--accent-color);
+  transform: translateY(-4px);
+}
+
+/* Center Brand */
+.urban-footer-logo {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.urban-footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.urban-footer-brand p {
+  color: var(--white-color);
+  font-size: 15px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+/* Copyright */
+.urban-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white-color);
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .urban-footer-title {
+    font-size: 17px;
+  }
+
+  .urban-footer-logo {
+    max-width: 190px;
+  }
+
+  .urban-footer-top {
+    padding-top: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-footer-social a,
+  .urban-footer-logo,
+  .urban-footer-links a {
+    transition: none;
+  }
+}
+
+/* footer end */
+
+
+
+/* Fixed Floating Icons */
+
+.urban-fixed-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  z-index: 1050;
+}
+
+.urban-fixed-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Phone */
+/* Phone Button - Urban Baby Theme */
+.urban-phone-btn {
+  background: var(--brand-gradient);
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+}
+
+.urban-phone-btn:hover {
+  background: var(--primary-hover);
+  color: var(--white-color);
+  transform: translateY(-5px);
+}
+/* WhatsApp */
+.urban-whatsapp-fixed {
+  background: #25D366;
+  font-size: 25px;
+}
+
+/* Back to Top */
+.urban-back-top-btn {
+  background: var(--secondary-color);
+}
+
+/* Hover Animation */
+.urban-fixed-btn:hover {
+  color: var(--white-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(6, 78, 168, 0.22);
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .urban-fixed-icons {
+    right: 12px;
+    bottom: 15px;
+    gap: 10px !important;
+  }
+
+  .urban-fixed-btn {
+    width: 43px;
+    height: 43px;
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-fixed-btn {
+    transition: none;
+  }
+}
+
+
+/* fixed-icon end */
