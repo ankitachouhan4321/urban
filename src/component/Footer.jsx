@@ -125,9 +125,7 @@ const Footer = () => {
 
                 <li className="d-flex gap-3">
                   <i className="fa-solid fa-envelope mt-1"></i>
-                  <a href="mailto:abc@gmail.com">
-                    abc@gmail.com
-                  </a>
+                  <a href="mailto:abc@gmail.com">abc@gmail.com</a>
                 </li>
 
                 <li className="d-flex gap-3">
@@ -151,10 +149,9 @@ const Footer = () => {
             </div>
 
             <div className="col-md-4 text-center text-md-end">
-              <a href="#home" className="urban-back-top">
-                Back to Top
-                <i className="fa-solid fa-arrow-up ms-2"></i>
-              </a>
+              <p>
+                Created by <a href="https://viraladsmedia.com/"> Viral Ads Media </a>
+              </p>
             </div>
           </div>
         </div>

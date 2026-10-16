@@ -27,8 +27,24 @@
   --button-radius: 30px;
 
   --green-bg: #12d6771c;
+   --font-heading: "Nunito", sans-serif;
+  --font-body: "Poppins", sans-serif;
 }
 
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
 body {
   margin: 0;
   background: var(--background-color);
@@ -1051,6 +1067,12 @@ navbar start
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   color: var(--white-color);
   font-size: 13px;
+
+}
+.urban-footer-bottom a {
+    color:  white
+    
+
 }
 
 @media (max-width: 767px) {
