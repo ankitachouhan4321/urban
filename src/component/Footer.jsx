@@ -161,9 +161,9 @@ const Footer = () => {
                 <li className="d-flex gap-3">
                   <i className="fa-solid fa-location-dot mt-1"></i>
                   <span>
-                    <b> Manufactured By: </b> KRISHNENDU HEALTHCARE PVT. LTD.
-                    77, Smart Industrial Park, Near Natrip, Pithampur, Dist.
-                    Dhar, M.P. – 454774, India.
+                    <b> M/s C2A Enterprise Pvt. Ltd. <br/></b> 
+                    A-94, Basement, Mayapuri Industrial Area, Phase 2, New Delhi
+                    – 110064.
                   </span>
                 </li>
               </ul>
