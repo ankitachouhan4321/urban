@@ -1185,16 +1185,16 @@ const App = () => {
 
       <section className="urban-map-section" id="location">
         <div className="container-fluid p-0">
-        
           <iframe
+            title="C2A Enterprises Pvt. Ltd. Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.226679019263!2d77.11650461194046!3d28.622967584411988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d036e41778817%3A0x508753198ee27cd7!2sC2A%20Enterprises%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1792143255718!5m2!1sen!2sin"
             width="100%"
             height="350"
-            style={{ border: 0 }}
+            style={{ border: 0, display: "block" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-          ></iframe>
+          />
         </div>
       </section>
       {/* map end */}
