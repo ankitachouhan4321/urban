@@ -1156,3 +1156,213 @@ navbar start
 
 
 /* fixed-icon end */
+
+
+/* Urban Baby Contact Page */
+
+.urban-contact-banner {
+  background: var(--light-background);
+}
+
+.urban-contact-section {
+  background: var(--background-color);
+}
+
+/* Contact Information */
+.urban-contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-background);
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.urban-contact-content h3 {
+  color: var(--heading-color);
+}
+
+.urban-contact-note {
+  background: var(--light-background);
+  color: var(--primary-color);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Form Card */
+.urban-contact-form {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(6, 78, 168, 0.07);
+}
+
+.urban-contact-form h2 {
+  color: var(--heading-color);
+}
+
+/* Input Labels */
+.urban-contact-form .form-label {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Input Fields */
+.urban-contact-form .form-control,
+.urban-contact-form .form-select {
+  min-height: 48px;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  background: var(--card-background);
+  padding: 12px 15px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.urban-contact-form textarea.form-control {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.urban-contact-form .form-control:focus,
+.urban-contact-form .form-select:focus {
+  border-color: var(--secondary-color);
+  background: var(--white-color);
+  box-shadow: 0 0 0 3px rgba(0, 178, 245, 0.12);
+  outline: none;
+}
+
+.urban-contact-form .form-control::placeholder {
+  color: var(--muted-text);
+  opacity: 0.8;
+}
+
+/* Submit Button */
+.urban-contact-submit {
+  background: var(--brand-gradient);
+  color: var(--white-color);
+  border: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.urban-contact-submit:hover {
+  color: var(--white-color);
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(6, 78, 168, 0.2);
+}
+
+.urban-contact-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .urban-contact-form {
+    border-radius: 14px;
+  }
+
+  .urban-contact-submit {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-contact-submit,
+  .urban-contact-form .form-control,
+  .urban-contact-form .form-select {
+    transition: none;
+  }
+}
+
+
+/* contact-page end */
+
+
+/* Why Choose Us */
+#why-choose-us{
+  background-color: var(--green-bg);
+}
+.urban-why-choose {
+  background: var(--background-color);
+}
+
+/* Feature List */
+.urban-why-list {
+  padding: 18px;
+  border-bottom: 1px solid var(--border-color);
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.urban-why-list:hover {
+  background: var(--card-background);
+  border-radius: 10px;
+}
+
+/* Check Icon */
+.urban-why-check {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--light-background);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.urban-why-list h3 {
+  color: var(--primary-color);
+}
+
+/* Certifications */
+.urban-certifications-block {
+  border-top: 1px solid var(--border-color);
+}
+
+.urban-cert-logo {
+  min-height: 145px;
+}
+
+.urban-cert-logo img {
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.urban-cert-logo:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 575px) {
+  .urban-why-list {
+    padding: 15px 5px;
+  }
+
+  .urban-cert-logo {
+    min-height: 110px;
+  }
+
+  .urban-cert-logo img {
+    max-height: 85px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urban-why-list,
+  .urban-cert-logo img {
+    transition: none;
+  }
+}
+  /* why-choose end */

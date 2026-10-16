@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import FixedIcon from "./component/FixedIcon";
+import Contact from "./component/Contact";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Autoplay, Pagination } from "swiper/modules";
@@ -120,6 +122,61 @@ const products = [
     name: "Urban Baby Wet Wipes – Regular Pack",
     image: "/img/product.jpg",
     alt: "Urban Baby Wet Wipes Regular Pack",
+  },
+];
+
+
+const whyChoosePoints = [
+  {
+    title: "99% Pure Water",
+    description: "Water-based baby wipes for convenient everyday cleaning.",
+  },
+  {
+    title: "Alcohol & Paraben Free",
+    description: "Formulated without alcohol and parabens for daily baby care.",
+  },
+  {
+    title: "Aloe Vera & Vitamin E",
+    description:
+      "Enriched with Aloe Vera and Vitamin E for a thoughtful baby care experience.",
+  },
+  {
+    title: "Soft & Convenient",
+    description:
+      "Easy-to-use wipes for diaper changes, little hands, and everyday messes.",
+  },
+  {
+    title: "72 Wipes Per Pack",
+    description:
+      "Convenient resealable packaging helps keep wipes ready for use.",
+  },
+  {
+    title: "Manufacturer & Supplier",
+    description:
+      "Urban Baby offers baby wet wipes for customers, retailers, and bulk supply enquiries.",
+  },
+];
+
+const certifications = [
+  {
+    id: 1,
+    image: "/img/cer/1.png",
+    alt: "Urban Baby certification document 1",
+  },
+  {
+    id: 2,
+    image: "/img/cer/2.png",
+    alt: "Urban Baby certification document 2",
+  },
+  {
+    id: 3,
+    image: "/img/cer/3.png",
+    alt: "Urban Baby certification document 3",
+  },
+  {
+    id: 4,
+    image: "/img/cer/4.png",
+    alt: "Urban Baby certification document 4",
   },
 ];
 
@@ -807,56 +864,111 @@ const App = () => {
 
       {/* about-sec end */}
 
-      {/* certified start */}
+     
 
-      <section id="certified" className="py-lg-5 py-3">
-        <div className="certified container-lg py-lg-5 py-3">
-          <span className="urban-product-subtitle text-uppercase fw-semibold">
-            Quality Assurance & Trust
-          </span>
+      {/* why-choose start */}
 
-          <h2
-            className="urban-product-heading fw-bold mt-2 mb-3"
-            id="urban-certified-heading"
+      <section className="urban-why-choose py-lg-5 py-3" id="why-choose-us">
+        <div className="container-lg py-lg-5 py-3">
+          {/* Why Choose Us Heading */}
+          <div className="text-center mb-4">
+            <span className="urban-product-subtitle text-uppercase fw-semibold">
+              Why Choose Urban Baby
+            </span>
+
+            <h2 className="urban-product-heading fw-bold mt-2 mb-3">
+              Gentle Care, Thoughtful Quality
+            </h2>
+          </div>
+
+          {/* About & Introduction */}
+          <div className="row justify-content-center">
+            <div className="col-lg-10 text-center">
+              <p className="text-secondary mb-3 lh-lg">
+                At Urban Baby, we believe that everyday baby care should be
+                simple, comfortable, and convenient. As a baby wet wipes
+                manufacturer and supplier, we focus on offering practical
+                hygiene products that support parents in their daily routines.
+                Our Urban Baby Wet Wipes are made with 99% pure water and
+                enriched with Aloe Vera and Vitamin E.
+              </p>
+
+              <p className="text-secondary mb-4 lh-lg">
+                From diaper changes to cleaning little hands and feet, Urban
+                Baby Wipes are designed for everyday convenience. With an
+                alcohol-free and paraben-free formulation and easy-to-use
+                resealable packaging, our 72-wipe packs are a handy addition to
+                your baby care essentials. We also welcome enquiries from
+                retailers, wholesalers, and distributors looking for baby wet
+                wipes supply.
+              </p>
+            </div>
+          </div>
+
+          {/* Why Choose Us Points */}
+          <div className="row g-3 mt-2">
+            {whyChoosePoints.map((item, index) => (
+              <div className="col-lg-6" key={index}>
+                <ul className="list-unstyled mb-0">
+                  <li className="urban-why-list d-flex gap-3">
+                    <div className="urban-why-check flex-shrink-0">
+                      <i className="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                      <h3 className="h6 fw-bold mb-2">{item.title}</h3>
+
+                      <p className="text-secondary small mb-0 lh-lg">
+                        {item.description}
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Certifications Section */}
+          <div
+            className="urban-certifications-block text-center mt-5 pt-lg-5 pt-4"
+            id="certified"
           >
-            Our Certifications & Quality Standards
-          </h2>
+            <span className="urban-product-subtitle text-uppercase fw-semibold">
+              Quality Assurance & Trust
+            </span>
 
-          <div className="row justify-content-around">
-            <div className="col-lg-2 col-6">
-              <img
-                src="/img/cer/1.png"
-                className="img-fluid"
-                alt="Certification 1"
-              />
+            <h2
+              className="urban-product-heading fw-bold mt-2 mb-3"
+              id="urban-certified-heading"
+            >
+              Our Certifications & Quality Standards
+            </h2>
+
+            <p className="text-secondary mb-4">
+              Learn more about the certifications and quality standards
+              associated with Urban Baby.
+            </p>
+
+            {/* Certificate Logos */}
+            <div className="row justify-content-around align-items-center g-4">
+              {certifications.map((item) => (
+                <div className="col-lg-3 col-md-3 col-6" key={item.id}>
+                  <div className="urban-cert-logo d-flex align-items-center justify-content-center p-3">
+                    <img
+                      src={item.image}
+                      className="img-fluid"
+                      alt={item.alt}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="col-lg-2 col-6">
-              <img
-                src="/img/cer/2.png"
-                className="img-fluid"
-                alt="Certification 2"
-              />
-            </div>
-            <div className="col-lg-2 col-6">
-              <img
-                src="/img/cer/3.png"
-                className="img-fluid"
-                alt="Certification 3"
-              />
-            </div>
-            <div className="col-lg-2 col-6">
-              <img
-                src="/img/cer/4.png"
-                className="img-fluid"
-                alt="Certification 4"
-              />
-            </div>
-          
           </div>
         </div>
       </section>
 
-      {/* certified end */}
+      {/* why-choose end */}
 
       {/* faq-sec start */}
 
@@ -1049,6 +1161,8 @@ const App = () => {
         </div>
       </section>
       {/* testimonials end */}
+
+      <Contact />
 
       {/* map start */}
 
