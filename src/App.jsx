@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import FixedIcon from "./component/FixedIcon";
 import Contact from "./component/Contact";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +14,8 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+
 
 const slides = [
   {
@@ -331,6 +335,17 @@ const testimonials = [
 ];
 
 const App = () => {
+   useEffect(() => {
+     AOS.init({
+       duration: 800,
+       easing: "ease-in-out",
+       once: true,
+       offset: 100,
+       delay: 0,
+     });
+   }, []);
+
+
   const swiperRef = useRef(null);
 
   const renderCard = (step, large = false) => (
@@ -543,7 +558,7 @@ const App = () => {
         <div className="container-lg py-lg-4">
           <div className="row align-items-center g-4 g-lg-5">
             {/* Left - Product Image */}
-            <div className="col-lg-5">
+            <div className="col-lg-5" data-aos="zoom-in">
               <div className="urban-product-image text-center position-relative">
                 <img
                   src="/img/product-details.png"
@@ -561,11 +576,15 @@ const App = () => {
 
             {/* Right - Product Content */}
             <div className="col-lg-7">
-              <span className="urban-product-subtitle text-uppercase fw-semibold">
+              <span
+                className="urban-product-subtitle text-uppercase fw-semibold"
+                data-aos="fade-up"
+              >
                 Soft, Fresh & Gentle Baby Care
               </span>
 
               <h2
+                data-aos="fade-up"
                 className="urban-product-heading fw-bold mt-2 mb-3"
                 id="urban-product-heading"
               >
