@@ -36,6 +36,16 @@ body {
   font-weight: 400;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent fixed navbar from hiding sections */
+section[id] {
+  scroll-margin-top: 110px;
+}
+
 a{
   text-decoration: none !important;
 }

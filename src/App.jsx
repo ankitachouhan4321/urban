@@ -729,7 +729,7 @@ const App = () => {
                   </h3>
                   <div>
                     <a
-                      href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20enquire%20about%20Urban%20Baby%20Wipes."
+                      href="https://wa.me/919654596530?text=Hi%2C%20I%20want%20to%20enquire%20about%20Urban%20Baby%20Wipes."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="urban-whatsapp-btn d-inline-flex align-items-center gap-2 text-decoration-none fw-semibold"
@@ -850,7 +850,7 @@ const App = () => {
 
               <div>
                 <a
-                  href="contact"
+                  href="tel:+919654596530"
                   className="btn urban-product-btn px-4 py-3 rounded-pill fw-semibold"
                 >
                   Contact Now
@@ -863,8 +863,6 @@ const App = () => {
       </section>
 
       {/* about-sec end */}
-
-     
 
       {/* why-choose start */}
 
@@ -1169,14 +1167,14 @@ const App = () => {
       <section className="urban-map-section" id="location">
         <div className="container-fluid p-0">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224096.97988103647!2d76.92842289105195!3d28.644285309916096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1792068593186!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15342257.097458478!2d72.10531083016068!3d20.147883964188363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396251004dcd1ee7%3A0x587dc1db3cea2690!2sKrishnendu%20Healthcare%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1792137412656!5m2!1sen!2sin"
             width="100%"
-            height="450"
-            style={{ border: 0, display: "block" }}
+            height="350"
+            style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            title="Urban Baby Location Map"
+            title="Krishnendu Healthcare Pvt. Ltd. Location"
           ></iframe>
         </div>
       </section>

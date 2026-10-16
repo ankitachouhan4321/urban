@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Replace with the email that should receive Urban Baby enquiries
-const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
+const CONTACT_EMAIL = "ankitachouhan4585@gmail.com";
 
 const initialFormData = {
   name: "",
@@ -37,7 +37,7 @@ const Contact = () => {
 
     if (isSubmitting) return;
 
-    if (CONTACT_EMAIL === "YOUR_EMAIL@example.com") {
+    if (CONTACT_EMAIL === "ankitachouhan4585@gmail.com") {
       setStatus({
         type: "danger",
         message: "Please configure the enquiry email address.",

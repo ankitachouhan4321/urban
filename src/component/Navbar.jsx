@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "Home", id: "/" },
     { name: "About Us", id: "about-sec" },
     { name: "Baby Wipes", id: "products" },
-    { name: "Why Choose Us", id: "why-choose" },
+    { name: "Why Choose Us", id: "why-choose-us" },
     { name: "Contact Us", id: "contact" },
   ];
 
