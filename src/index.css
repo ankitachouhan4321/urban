@@ -526,7 +526,7 @@ navbar start
 }
 
 .urban-product-image-box {
-  background: var(--light-background);
+  background: #fef8eb;
   border-radius: 12px;
   /* aspect-ratio: 0.68; */
   overflow: hidden;
@@ -545,6 +545,17 @@ navbar start
 
 .urban-product-item:hover img {
   transform: scale(1.06);
+}
+.urban-product-item .img2{
+  display: none
+}
+
+.urban-product-item:hover .img1{
+  display: none;
+}
+
+.urban-product-item:hover .img2{
+  display: block
 }
 
 /* Product Name */

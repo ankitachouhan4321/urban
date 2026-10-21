@@ -99,32 +99,37 @@ const products = [
   {
     id: 1,
     name: "Urban Baby Wet Wipes – Regular Pack",
-    image: "/img/product.jpg",
+    image: "/img/product.png",
+    image2: "/img/product2.png",
     alt: "Urban Baby Wet Wipes Regular Pack",
   },
 
   {
     id: 2,
     name: "Urban Baby Wet Wipes – Regular Pack",
-    image: "/img/product.jpg",
+    image: "/img/product.png",
+    image2: "/img/product2.png",
     alt: "Urban Baby Wet Wipes Regular Pack",
   },
   {
     id: 3,
     name: "Urban Baby Wet Wipes – Regular Pack",
-    image: "/img/product.jpg",
+    image: "/img/product.png",
+    image2: "/img/product2.png",
     alt: "Urban Baby Wet Wipes Regular Pack",
   },
   {
     id: 4,
     name: "Urban Baby Wet Wipes – Regular Pack",
-    image: "/img/product.jpg",
+    image: "/img/product.png",
+    image2: "/img/product2.png",
     alt: "Urban Baby Wet Wipes Regular Pack",
   },
   {
     id: 5,
     name: "Urban Baby Wet Wipes – Regular Pack",
-    image: "/img/product.jpg",
+    image: "/img/product.png",
+    image2: "/img/product2.png",
     alt: "Urban Baby Wet Wipes Regular Pack",
   },
 ];
@@ -737,7 +742,14 @@ const App = () => {
                     <img
                       src={product.image}
                       alt={product.alt}
-                      className="img-fluid"
+                      className="img-fluid img1"
+                      loading="lazy"
+                    />
+                 
+                    <img
+                      src={product.image2}
+                      alt={product.alt}
+                      className="img-fluid img2"
                       loading="lazy"
                     />
                   </div>
