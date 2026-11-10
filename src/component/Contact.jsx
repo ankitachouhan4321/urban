@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Replace with the email that should receive Urban Baby enquiries
-const CONTACT_EMAIL = "info.viraladsmedia@gmail.com";
+const CONTACT_EMAIL = "urbanbabyproducts@gmail.com";
 
 const initialFormData = {
   name: "",
